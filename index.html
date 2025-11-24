@@ -4,114 +4,355 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kain Mason | ePortfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --border-soft: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .page-shell {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 32px 28px 24px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        padding: 36px 36px 28px;
+      }
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .intro {
+      margin: 12px 0 0;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    h3.section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 28px 0 12px;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3.section-title::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    h4.subsection-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin: 18px 0 8px;
+      color: #111827;
+    }
+
+    .featured-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .featured-item {
+      padding: 14px 14px 14px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border-soft);
+      background: #f9fafb;
+    }
+
+    .featured-item strong {
+      font-weight: 600;
+    }
+
+    .featured-item a {
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .featured-item a:hover {
+      text-decoration: underline;
+    }
+
+    .featured-item p {
+      margin: 4px 0 0;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .cs499-section {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(37, 99, 235, 0.18);
+    }
+
+    .cs499-section p {
+      margin: 6px 0 0;
+      font-size: 0.94rem;
+      color: #1f2937;
+    }
+
+    ul.bullet-list {
+      margin: 8px 0 10px 18px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: #4b5563;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 4px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
+      font-size: 0.9em;
+      background: #e5e7eb;
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+
+    footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 40px; max-width: 900px;">
+<body>
+  <div class="page-shell">
+    <main class="card">
 
-  <h1 style="margin-bottom: 10px;">Kain Mason</h1>
-  <h2 style="margin-top: 0; color: #555;">Software &amp; Data Engineer</h2>
+      <header>
+        <h1 class="name">Kain Mason</h1>
+        <h2 class="subtitle">Software &amp; Data Engineer</h2>
+        <p class="intro">
+          These featured projects highlight my work in full-stack development,
+          data engineering, visualization, and secure, well-documented system design.
+          This ePortfolio is being actively built and refined as part of my CS-499
+          Computer Science Capstone.
+        </p>
+      </header>
 
-  <p>
-    Welcome! These featured projects highlight my work in full-stack development,
-    data engineering, visualization, and secure, well-documented system design.
-    This portfolio is being actively built and refined as part of my CS-499
-    Computer Science Capstone.
-  </p>
+      <!-- Featured Artifacts -->
+      <section>
+        <h3 class="section-title">Featured Artifacts</h3>
 
-  <!-- Featured Artifacts -->
-  <h3 style="margin-top: 40px; color:#333;">Featured Artifacts</h3>
-  <ul>
+        <ul class="featured-list">
 
-    <li style="margin-bottom: 20px;">
-      <strong>Software Design &amp; Engineering:</strong>
-      <a href="https://github.com/KainMason/CS465-Final-Project" target="_blank">
-        Travlr Getaways – MEAN Stack Application
-      </a>
-      &mdash; a full-stack travel booking system using Node.js, Express,
-      MongoDB, Handlebars, and an Angular admin SPA. This project is my primary
-      Software Design &amp; Engineering artifact for CS-499 and is currently being
-      enhanced and refactored as part of my capstone milestones.
-    </li>
+          <li class="featured-item">
+            <strong>Software Design &amp; Engineering:</strong>
+            <a href="https://github.com/KainMason/CS465-Final-Project" target="_blank">
+              Travlr Getaways – MEAN Stack Application
+            </a>
+            <p>
+              A full-stack travel booking system using Node.js, Express,
+              MongoDB, Handlebars, and an Angular admin SPA. This project is my primary
+              Software Design &amp; Engineering artifact for CS-499 and is being enhanced
+              and refactored as part of my capstone milestones.
+            </p>
+          </li>
 
-    <li style="margin-bottom: 20px;">
-      <strong>Algorithms &amp; Data Structures:</strong>
-      <a href="https://github.com/KainMason/C330-Computer-Graphics-and-Visualization"
-         target="_blank">
-        3D Desk Scene – C++ / OpenGL
-      </a>
-      &mdash; a graphics project using custom geometry algorithms, lighting, and
-      hierarchical rendering. This artifact demonstrates applied math,
-      transformations, and structured code to manage complexity.
-    </li>
+          <li class="featured-item">
+            <strong>Algorithms &amp; Data Structures:</strong>
+            <a href="https://github.com/KainMason/C330-Computer-Graphics-and-Visualization"
+               target="_blank">
+              3D Desk Scene – C++ / OpenGL
+            </a>
+            <p>
+              A graphics project built using custom geometry-building algorithms,
+              lighting, texture mapping, and a structured rendering pipeline. This artifact
+              demonstrates applied math, transformations, and structured code to manage
+              complexity in a real-time 3D environment.
+            </p>
+          </li>
 
-    <li style="margin-bottom: 20px;">
-      <strong>Databases &amp; System Design:</strong>
-      <a href="https://github.com/KainMason/CS-340-8-2-Journal-Portfolio-Item"
-         target="_blank">
-        Grazioso Salvare – MongoDB Rescue Dashboard
-      </a>
-      &mdash; a Python + Dash dashboard for filtering and visualizing animal
-      rescue data. Focus areas include data modeling, CRUD operations, basic
-      indexing considerations, and building a simple analytics-style UI.
-    </li>
+          <li class="featured-item">
+            <strong>Databases &amp; System Design:</strong>
+            <a href="https://github.com/KainMason/CS-340-8-2-Journal-Portfolio-Item"
+               target="_blank">
+              Grazioso Salvare – MongoDB Rescue Dashboard
+            </a>
+            <p>
+              A Python + Dash dashboard for filtering and visualizing animal
+              rescue data. Focus areas include data modeling, CRUD operations, indexing
+              considerations, and building a clean, task-focused analytics-style UI.
+            </p>
+          </li>
 
-  </ul>
+        </ul>
+      </section>
 
-  <!-- CS-499 Progress Section -->
-  <h3 style="margin-top: 40px; color:#333;">CS-499 Progress (Milestone Two)</h3>
-  <p>
-    For <strong>Milestone Two</strong>, I focused on enhancing the
-    <em>Travlr Getaways</em> project as my Software Design &amp; Engineering artifact.
-    The goal was not just to have working code, but to improve the structure,
-    maintainability, and clarity of the application so it looks and feels more
-    like something used in a real development environment.
-  </p>
+      <!-- CS-499 Progress -->
+      <section>
+        <h3 class="section-title">CS-499 Progress</h3>
 
-  <h4 style="margin-top: 20px; color:#444;">Key Enhancements Completed</h4>
-  <ul>
-    <li>
-      <strong>Refactored backend structure:</strong> Separated routing, controllers,
-      and configuration into clearer folders and removed duplicated logic to make
-      the API easier to follow and maintain.
-    </li>
-    <li>
-      <strong>Improved error handling:</strong> Added more consistent API responses
-      and status codes so failures are easier to debug and less confusing to clients.
-    </li>
-    <li>
-      <strong>Cleaned up MongoDB queries:</strong> Standardized query patterns and
-      removed unused or redundant queries to keep the data access layer predictable.
-    </li>
-    <li>
-      <strong>Enhanced documentation:</strong> Expanded the README with setup steps,
-      technology stack details, and a short architecture overview so a new developer
-      or hiring manager can quickly understand how the system fits together.
-    </li>
-    <li>
-      <strong>Front-end layout tweaks:</strong> Made small consistency improvements
-      to the customer-facing pages to keep the UI more readable and aligned across views.
-    </li>
-  </ul>
+        <!-- Milestone Two -->
+        <div class="cs499-section">
+          <h4 class="subsection-title">
+            Milestone Two – Software Design &amp; Engineering (Travlr Getaways)
+          </h4>
+          <p>
+            For <strong>Milestone Two</strong>, I enhanced my Travlr Getaways project to
+            improve structure, maintainability, and clarity so it behaves more like a
+            production-ready MEAN application instead of a one-off class assignment.
+          </p>
+          <ul class="bullet-list">
+            <li><strong>Refactored backend structure:</strong> separated routes, controllers, and config files.</li>
+            <li><strong>Improved error handling:</strong> standardized API responses and HTTP status codes.</li>
+            <li><strong>Cleaned MongoDB queries:</strong> removed redundancy and standardized query patterns.</li>
+            <li><strong>Enhanced documentation:</strong> expanded the README and added an architecture overview.</li>
+            <li><strong>UI consistency updates:</strong> tightened layout and formatting on customer-facing pages.</li>
+          </ul>
+        </div>
 
-  <p>
-    These changes support the CS-499 outcomes around software engineering/design,
-    communication, and developing a security-aware mindset. I am still iterating,
-    but this represents my current level of progress in the course.
-  </p>
+        <!-- Milestone Three -->
+        <div class="cs499-section" style="margin-top: 14px;">
+          <h4 class="subsection-title">
+            Milestone Three – Algorithms &amp; Data Structures (3D Desk Scene)
+          </h4>
+          <p>
+            For <strong>Milestone Three</strong>, I focused on improving the algorithms
+            and data structures behind my C++ / OpenGL 3D Desk Scene so it is cleaner,
+            safer, and easier to extend.
+          </p>
+          <ul class="bullet-list">
+            <li>
+              <strong>Geometry algorithm refactoring:</strong>
+              consolidated repeated shape generation into reusable functions.
+            </li>
+            <li>
+              <strong>Stronger data structures:</strong>
+              replaced raw arrays with <code>std::vector</code> and grouped vertex,
+              normal, and texture data into structured containers.
+            </li>
+            <li>
+              <strong>Transformation pipeline cleanup:</strong>
+              clarified the order of scaling → rotation → translation and improved
+              model/view/projection logic.
+            </li>
+            <li>
+              <strong>Improved documentation:</strong>
+              added comments explaining geometry-building steps and algorithm intent.
+            </li>
+            <li>
+              <strong>Stability improvements:</strong>
+              added basic bounds checks, removed unused code, and fixed minor
+              rendering issues.
+            </li>
+          </ul>
+        </div>
 
-  <p>
-    Across all projects, I focus on writing clear, maintainable code, documenting
-    my decisions, and building solutions that would actually be usable in a real
-    environment, not just as class assignments.
-  </p>
+        <p class="intro" style="margin-top: 16px;">
+          Across these artifacts, I focus on writing clear, maintainable code,
+          documenting my decisions, and building solutions that would be usable
+          in real environments, not just in the classroom.
+        </p>
+      </section>
 
-  <hr style="margin-top: 40px;" />
+      <footer>
+        <span>&copy; 2025 Kain Mason</span>
+        <span>
+          <a href="https://github.com/KainMason" target="_blank">GitHub</a> &nbsp;|&nbsp;
+          Built with GitHub Pages
+        </span>
+      </footer>
 
-  <p>
-    &copy; 2025 Kain Mason |
-    <a href="https://github.com/KainMason" target="_blank">GitHub</a> |
-    Built with GitHub Pages
-  </p>
-
+    </main>
+  </div>
 </body>
 </html>
+
