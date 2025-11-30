@@ -166,8 +166,7 @@
     <main class="card">
 
       <header>
-       <img src="profile.jpg" alt="Photo of Kain Mason" class="profile-photo" />
-
+        <img src="profile.jpg" alt="Photo of Kain Mason" class="profile-photo" />
 
         <h1 class="name">Kain Mason</h1>
         <h2 class="subtitle">Software &amp; Data Engineer</h2>
@@ -179,11 +178,7 @@
           Computer Science Capstone.
         </p>
       </header>
-<body>
-  <div class="page-shell">
-    <main class="card">
 
-   
       <!-- Featured Artifacts -->
       <section>
         <h3 class="section-title">Featured Artifacts</h3>
@@ -225,8 +220,10 @@
             </a>
             <p>
               A Python + Dash dashboard for filtering and visualizing animal
-              rescue data. Focus areas include data modeling, CRUD operations, indexing
-              considerations, and building a clean, task-focused analytics-style UI.
+              rescue data. As part of my capstone, I enhanced the underlying MongoDB
+              CRUD module by cleaning up query logic, adding input validation and
+              error handling, and standardizing return structures so the dashboard
+              is more stable, secure, and easier to maintain.
             </p>
           </li>
 
@@ -289,6 +286,42 @@
               <strong>Stability improvements:</strong>
               added basic bounds checks, removed unused code, and fixed minor
               rendering issues.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Milestone Four -->
+        <div class="cs499-section" style="margin-top: 14px;">
+          <h4 class="subsection-title">
+            Milestone Four – Databases (Grazioso Salvare Dashboard)
+          </h4>
+          <p>
+            For <strong>Milestone Four</strong>, I revisited my Grazioso Salvare MongoDB
+            dashboard and focused on strengthening the database layer behind the UI.
+            The goal was to make the data access code more reliable, secure, and
+            understandable for both future developers and reviewers.
+          </p>
+          <ul class="bullet-list">
+            <li>
+              <strong>Standardized MongoDB queries:</strong>
+              cleaned up and unified query patterns using consistent operators so the
+              search logic is easier to follow and maintain.
+            </li>
+            <li>
+              <strong>Input validation &amp; error handling:</strong>
+              added checks around user-provided filters and wrapped CRUD calls in
+              error handling to prevent the dashboard from breaking on bad input or
+              unexpected database responses.
+            </li>
+            <li>
+              <strong>Consistent return structures:</strong>
+              updated CRUD methods to return predictable formats, which fixed issues
+              with how the Dash callbacks read and display the data.
+            </li>
+            <li>
+              <strong>Documentation updates:</strong>
+              expanded the README and in-code comments to explain how the database
+              layer works and how it supports the dashboard’s filters, map, and charts.
             </li>
           </ul>
         </div>
