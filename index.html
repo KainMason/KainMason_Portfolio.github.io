@@ -20,7 +20,6 @@
       --text-main: #0f172a;
       --text-muted: #6b7280;
       --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.08);
       --border-soft: #e5e7eb;
       --chip-bg: rgba(37, 99, 235, 0.08);
       --chip-text: #1d4ed8;
@@ -31,12 +30,10 @@
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: "Inter", system-ui, sans-serif;
       background: var(--bg-gradient);
       color: var(--text-main);
       display: flex;
-      align-items: flex-start;
       justify-content: center;
       padding: 32px 16px;
     }
@@ -46,7 +43,7 @@
     .card {
       background: var(--card-bg);
       border-radius: 18px;
-      padding: 28px 24px 20px;
+      padding: 28px 24px;
       box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
       border: 1px solid rgba(148, 163, 184, 0.35);
     }
@@ -55,9 +52,6 @@
       border-bottom: 1px solid var(--border-soft);
       padding-bottom: 16px;
       margin-bottom: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
       text-align: center;
     }
 
@@ -66,7 +60,6 @@
       height: 128px;
       border-radius: 999px;
       object-fit: cover;
-      object-position: center;
       margin: 0 auto 8px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.25);
       border: 3px solid #fff;
@@ -75,15 +68,8 @@
     .name { font-size: 2rem; font-weight: 700; margin: 0; }
     .subtitle { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 0; }
 
-    .intro {
-      margin: 10px 0 0;
-      font-size: 0.98rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-    }
-
     nav {
-      margin: 14px auto 0;
+      margin-top: 12px;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -101,97 +87,36 @@
       border-radius: 999px;
     }
 
-    nav a:hover {
-      background: rgba(37, 99, 235, 0.12);
-    }
-
     h3.section-title {
       font-size: 1.1rem;
       font-weight: 700;
       margin: 26px 0 12px;
-      color: #111827;
       display: flex;
-      align-items: center;
       gap: 8px;
-      scroll-margin-top: 24px;
+      align-items: center;
     }
 
     h3.section-title::before {
       content: "";
       width: 4px;
       height: 18px;
-      border-radius: 999px;
       background: var(--accent);
-      display: inline-block;
-    }
-
-    h4.subsection-title {
-      font-size: 0.98rem;
-      font-weight: 700;
-      margin: 16px 0 8px;
-      color: #111827;
+      border-radius: 999px;
     }
 
     .callout {
       border: 1px solid var(--border-soft);
       background: #f9fafb;
       border-radius: 12px;
-      padding: 14px 14px;
-      line-height: 1.7;
-      color: #374151;
+      padding: 14px;
       font-size: 0.96rem;
+      line-height: 1.7;
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-    @media (min-width: 860px) {
-      .grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .item {
-      padding: 14px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--border-soft);
-      background: #f9fafb;
-    }
-
-    .item a {
-      font-weight: 700;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .item a:hover { text-decoration: underline; }
-
-    ul.bullet-list {
-      margin: 8px 0 0 18px;
-      padding: 0;
-      font-size: 0.94rem;
-      color: #4b5563;
-      line-height: 1.6;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 10px;
-    }
-    .links a {
-      display: inline-block;
-      font-weight: 700;
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .links a:hover { text-decoration: underline; }
 
     .muted { color: var(--text-muted); }
 
     footer {
-      margin-top: 18px;
+      margin-top: 24px;
       padding-top: 14px;
       border-top: 1px solid var(--border-soft);
       font-size: 0.9rem;
@@ -199,280 +124,90 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 10px;
     }
-
-    code { background: rgba(15,23,42,0.06); padding: 2px 6px; border-radius: 6px; }
   </style>
 </head>
 
 <body>
-  <div class="page-shell">
-    <main class="card">
+<div class="page-shell">
+<main class="card">
 
-      <header>
-        <img src="profile.jpg" alt="Photo of Kain Mason" class="profile-photo" />
-        <h1 class="name">Kain Mason</h1>
-        <h2 class="subtitle">CS-499 Computer Science Capstone | ePortfolio</h2>
+<header>
+  <img src="profile.jpg" alt="Photo of Kain Mason" class="profile-photo" />
+  <h1 class="name">Kain Mason</h1>
+  <h2 class="subtitle">CS-499 Computer Science Capstone | ePortfolio</h2>
 
-        <p class="intro">
-          This ePortfolio showcases my growth across software engineering, algorithms &amp; data structures,
-          databases, and secure, well-documented system design. It includes my professional self-assessment,
-          code review, enhanced artifacts, and supporting narratives.
-        </p>
+  <nav>
+    <a href="#self-assessment">Self-Assessment</a>
+    <a href="#code-review">Code Review</a>
+    <a href="#featured">Artifacts</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
+</header>
 
-        <nav aria-label="Page navigation">
-          <a href="#self-assessment">Self-Assessment</a>
-          <a href="#code-review">Code Review</a>
-          <a href="#featured">Featured Artifacts</a>
-          <a href="#narratives">Narratives</a>
-          <a href="#downloads">Downloads</a>
-          <a href="#progress">Milestone Summary</a>
-        </nav>
-      </header>
-
-      <!-- PROFESSIONAL SELF-ASSESSMENT (MUST BE FIRST) -->
-      <section id="self-assessment">
-        <h3 class="section-title">Professional Self-Assessment</h3>
-
-        <div class="callout">
-          <p>
-            Completing the Computer Science program at Southern New Hampshire University and developing this ePortfolio
-            has given me the opportunity to clearly articulate my growth as a computing professional. This portfolio represents
-            more than a collection of assignments—it reflects my progression from learning foundational concepts to applying
-            software engineering, algorithmic thinking, database design, and security principles in realistic, industry-aligned projects.
-          </p>
-          <p>
-            Throughout the program, I strengthened my skills in full-stack development, problem solving, and data management.
-            Revisiting earlier projects during CS-499 helped me shift from a “make it work” mindset to a professional focus on
-            maintainability, scalability, documentation, and secure design.
-          </p>
-          <p>
-            Across the artifacts in this portfolio, I demonstrate professional communication through structured narratives and documentation,
-            applied algorithms and data structures in performance-aware contexts, and database practices that prioritize validation and
-            reliability. I also apply a security mindset by anticipating failures and tightening how systems handle errors and data exposure.
-          </p>
-          <p>
-            <strong>Full self-assessment (Word document):</strong>
-            <a href="Professional%20Self%20Assessment.docx" target="_blank" rel="noopener">
-              Professional Self Assessment.docx
-            </a>
-          </p>
-        </div>
-      </section>
-
-      <!-- CODE REVIEW -->
-    <section id="code-review">
-  <h3 class="section-title">Informal Code Review Video</h3>
-
+<!-- PROFESSIONAL SELF-ASSESSMENT -->
+<section id="self-assessment">
+  <h3 class="section-title">Professional Self-Assessment</h3>
   <div class="callout">
-    <p class="muted" style="margin-top:0;">
-      This informal code review walks through the original artifacts,
-      identifies areas for improvement, and explains how the enhancements
-      align with the CS program outcomes.
+    <p>
+      Completing the Computer Science program at Southern New Hampshire University
+      allowed me to transition from foundational coursework to applying software
+      engineering, algorithms, databases, and secure coding principles in realistic
+      projects. This ePortfolio reflects that growth and my readiness to contribute
+      professionally.
     </p>
-
-    <div style="
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      margin-top: 12px;
-    ">
-      <iframe
-        src="https://onedrive.live.com/personal/70031df6544df406/_layouts/15/embed.aspx?UniqueId=3187f384-b8aa-4cd0-a6e7-531e18ab38ae&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen
-        title="Code Review Video – CS-499"
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-        ">
-      </iframe>
-      <p class="muted" style="margin-top: 10px;">
-  <strong>Note:</strong> If the embedded video does not load properly due to
-  browser or network restrictions, you may download the video directly below.
-</p>
-
-<p>
-  <a href="code%20review%20video%20final.mp4" download>
-    ⬇️ Download Code Review Video (MP4)
-  </a>
-</p>
-
-    </div>
-
-    <p class="muted" style="margin-top: 10px;">
-      Video hosted via OneDrive and embedded directly in the ePortfolio </p>
+    <p>
+      Revisiting and enhancing earlier work during CS-499 strengthened my focus on
+      maintainability, documentation, and security-conscious design.
+    </p>
+    <p>
+      <strong>Full self-assessment:</strong>
+      <a href="Professional%20Self%20Assessment.docx" target="_blank">Download (Word)</a>
+    </p>
   </div>
 </section>
 
+<!-- CODE REVIEW -->
+<section id="code-review">
+  <h3 class="section-title">Informal Code Review Video</h3>
 
-      <!-- FEATURED ARTIFACTS -->
-      <section id="featured">
-        <h3 class="section-title">Featured Artifacts</h3>
+  <div class="callout">
+    <p class="muted">
+      This video reviews the original artifacts, identifies improvement areas,
+      and explains how enhancements align with CS program outcomes.
+    </p>
 
-        <div class="grid">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+      <iframe
+        src="https://onedrive.live.com/personal/70031df6544df406/_layouts/15/embed.aspx?UniqueId=3187f384-b8aa-4cd0-a6e7-531e18ab38ae"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
+        allowfullscreen
+        title="Code Review Video">
+      </iframe>
+    </div>
 
-          <div class="item">
-            <h4 class="subsection-title" style="margin-top:0;">Software Design &amp; Engineering</h4>
-            <a href="https://github.com/KainMason/CS465-Final-Project" target="_blank" rel="noopener">
-              Travlr Getaways – MEAN Stack Application
-            </a>
-            <p class="muted" style="margin:10px 0 0;">
-              Full-stack travel booking system with Node.js, Express, MongoDB, Handlebars, and an Angular admin SPA.
-              Enhanced in CS-499 to improve structure, maintainability, error handling, and documentation.
-            </p>
-          </div>
+    <p class="muted" style="margin-top:10px;">
+      <strong>Note:</strong> If the video does not load, download it below.
+    </p>
 
-          <div class="item">
-            <h4 class="subsection-title" style="margin-top:0;">Algorithms &amp; Data Structures</h4>
-            <a href="https://github.com/KainMason/C330-Computer-Graphics-and-Visualization" target="_blank" rel="noopener">
-              3D Desk Scene – C++ / OpenGL
-            </a>
-            <p class="muted" style="margin:10px 0 0;">
-              Real-time 3D rendering project demonstrating applied algorithms, transformations, and structured data handling
-              for vertex and texture pipelines.
-            </p>
-          </div>
-
-          <div class="item" style="grid-column: 1 / -1;">
-            <h4 class="subsection-title" style="margin-top:0;">Databases</h4>
-            <a href="https://github.com/KainMason/CS-340-8-2-Journal-Portfolio-Item" target="_blank" rel="noopener">
-              Grazioso Salvare – MongoDB Rescue Dashboard
-            </a>
-            <p class="muted" style="margin:10px 0 0;">
-              Python + Dash dashboard powered by a MongoDB CRUD module. Enhanced to standardize queries,
-              improve validation and error handling, and make the data layer more reliable and secure.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- NARRATIVES -->
-      <section id="narratives">
-        <h3 class="section-title">Artifact Narratives (Word Documents)</h3>
-
-        <div class="callout">
-          <p class="muted" style="margin-top:0;">
-            Each narrative includes: artifact description, justification, enhancement summary, skills demonstrated &amp; outcome alignment,
-            and reflection on the enhancement process.
-          </p>
-
-          <div class="links">
-            <a href="CS499_M2_Narrative%20(3).docx" target="_blank" rel="noopener">
-              Milestone Two Narrative (Software Design &amp; Engineering)
-            </a>
-            <a href="CS499_M3_Narrative%20(1).docx" target="_blank" rel="noopener">
-              Milestone Three Narrative (Algorithms &amp; Data Structures)
-            </a>
-            <a href="CS499_M4_Narrative%20(1).docx" target="_blank" rel="noopener">
-              Milestone Four Narrative (Databases)
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- DOWNLOADS (ORIGINAL + ENHANCED) -->
-      <section id="downloads">
-        <h3 class="section-title">Technical Artifacts (Original vs Enhanced Downloads)</h3>
-
-        <div class="grid">
-
-          <div class="item">
-            <h4 class="subsection-title" style="margin-top:0;">Software Design &amp; Engineering</h4>
-            <div class="links">
-              <a href="Original%20format%20Artificat%20one%20Enhanced_KainMason_M2.zip" target="_blank" rel="noopener">
-                Original Artifact ZIP
-              </a>
-              <a href="Enhanced%20format%20Artificat%20one%20Enhanced_KainMason_M2%20-%20Copy.zip" target="_blank" rel="noopener">
-                Enhanced Artifact ZIP
-              </a>
-            </div>
-            <p class="muted" style="margin:10px 0 0;">Clearly labeled originals and CS-499 enhancements for reviewer comparison.</p>
-          </div>
-
-          <div class="item">
-            <h4 class="subsection-title" style="margin-top:0;">Algorithms &amp; Data Structures</h4>
-            <div class="links">
-              <a href="Original%20format%20Artifact%20two%20C330-Computer-Graphics-and-Visualization-Enhance_KainMason%20(1).zip" target="_blank" rel="noopener">
-                Original Artifact ZIP
-              </a>
-              <a href="Enhanced%20format%20Artifact%20two%20C330-Computer-Graphics-and-Visualization-Enhance_KainMason%20(1)%20-%20Copy.zip" target="_blank" rel="noopener">
-                Enhanced Artifact ZIP
-              </a>
-            </div>
-            <p class="muted" style="margin:10px 0 0;">Includes the original project and the enhanced implementation.</p>
-          </div>
-
-          <div class="item" style="grid-column: 1 / -1;">
-            <h4 class="subsection-title" style="margin-top:0;">Databases</h4>
-            <div class="links">
-              <a href="Original%20format%20Artifact%20three%20CS-340-8-2-Journal-Portfolio-Item-main%20(2)%20(1).zip" target="_blank" rel="noopener">
-                Original Artifact ZIP
-              </a>
-              <a href="Enhanced%20format%20Artifact%20three%20CS-340-8-2-Journal-Portfolio-Item-main%20(2)%20(1)%20-%20Copy.zip" target="_blank" rel="noopener">
-                Enhanced Artifact ZIP
-              </a>
-            </div>
-            <p class="muted" style="margin:10px 0 0;">Enhanced MongoDB CRUD layer, validation, error handling, and documentation updates.</p>
-          </div>
-
-        </div>
-
-        <p class="intro" style="margin-top: 14px;">
-          Note: The repository links above show the projects in context; the ZIPs provide a direct snapshot of the original and enhanced
-          technical artifacts for course submission.
-        </p>
-      </section>
-
-      <!-- MILESTONE SUMMARY -->
-      <section id="progress">
-        <h3 class="section-title">Milestone Summary</h3>
-
-        <div class="callout">
-          <h4 class="subsection-title" style="margin-top:0;">Milestone Two – Software Design &amp; Engineering</h4>
-          <ul class="bullet-list">
-            <li><strong>Refactored backend structure:</strong> separated routes, controllers, configuration</li>
-            <li><strong>Improved error handling:</strong> more consistent and safer API responses</li>
-            <li><strong>Documentation upgrades:</strong> expanded README and clarified setup/architecture</li>
-          </ul>
-
-          <h4 class="subsection-title">Milestone Three – Algorithms &amp; Data Structures</h4>
-          <ul class="bullet-list">
-            <li><strong>Algorithm-focused refactoring:</strong> reusable geometry generation logic</li>
-            <li><strong>Improved structures:</strong> safer containers and clearer data organization</li>
-            <li><strong>Clarity:</strong> documented transformation logic and intent</li>
-          </ul>
-
-          <h4 class="subsection-title">Milestone Four – Databases</h4>
-          <ul class="bullet-list">
-            <li><strong>Standardized queries:</strong> consistent patterns and operators</li>
-            <li><strong>Validation + error handling:</strong> safer CRUD interactions and stability</li>
-            <li><strong>Clearer data-layer documentation:</strong> easier to maintain and review</li>
-          </ul>
-        </div>
-      </section>
-
-      <footer>
-        <span>&copy; 2025 Kain Mason</span>
-        <span>
-          <a href="https://github.com/KainMason" target="_blank" rel="noopener">GitHub</a>
-          &nbsp;|&nbsp; Built with GitHub Pages
-        </span>
-      </footer>
-
-    </main>
+    <p>
+      <a href="code%20review%20video%20final.mp4" download>
+        ⬇️ Download Code Review Video (MP4)
+      </a>
+    </p>
   </div>
+</section>
+
+<footer>
+  <span>&copy; 2025 Kain Mason</span>
+  <span>
+    <a href="https://github.com/KainMason" target="_blank">GitHub</a> |
+    Built with GitHub Pages
+  </span>
+</footer>
+
+</main>
+</div>
 </body>
 </html>
 
-</body>
-</html>
