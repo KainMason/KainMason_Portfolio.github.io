@@ -113,6 +113,47 @@
       line-height: 1.7;
     }
 
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 860px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .item {
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border-soft);
+      background: #f9fafb;
+    }
+
+    .item a {
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .item a:hover { text-decoration: underline; }
+
+    ul.bullet-list {
+      margin: 8px 0 0 18px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .links a {
+      display: block;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 6px;
+    }
+
     .muted { color: var(--text-muted); }
 
     footer {
@@ -140,70 +181,88 @@
   <nav>
     <a href="#self-assessment">Self-Assessment</a>
     <a href="#code-review">Code Review</a>
-    <a href="#featured">Artifacts</a>
+    <a href="#featured">Featured Artifacts</a>
+    <a href="#narratives">Narratives</a>
     <a href="#downloads">Downloads</a>
+    <a href="#progress">Milestones</a>
   </nav>
 </header>
 
-<!-- PROFESSIONAL SELF-ASSESSMENT -->
+<!-- SELF-ASSESSMENT -->
 <section id="self-assessment">
   <h3 class="section-title">Professional Self-Assessment</h3>
   <div class="callout">
-    <p>
-      Completing the Computer Science program at Southern New Hampshire University
-      allowed me to transition from foundational coursework to applying software
-      engineering, algorithms, databases, and secure coding principles in realistic
-      projects. This ePortfolio reflects that growth and my readiness to contribute
-      professionally.
-    </p>
-    <p>
-      Revisiting and enhancing earlier work during CS-499 strengthened my focus on
-      maintainability, documentation, and security-conscious design.
-    </p>
-    <p>
-      <strong>Full self-assessment:</strong>
-      <a href="Professional%20Self%20Assessment.docx" target="_blank">Download (Word)</a>
-    </p>
+    <p>Completing the Computer Science program at SNHU allowed me to transition from foundational coursework to applying software engineering, algorithms, databases, and secure coding principles in realistic projects.</p>
+    <p>This ePortfolio reflects my growth, professional readiness, and ability to revisit and improve existing systems.</p>
+    <p><strong>Full version:</strong> <a href="Professional%20Self%20Assessment.docx" target="_blank">Download Word Document</a></p>
   </div>
 </section>
 
 <!-- CODE REVIEW -->
 <section id="code-review">
   <h3 class="section-title">Informal Code Review Video</h3>
-
   <div class="callout">
-    <p class="muted">
-      This video reviews the original artifacts, identifies improvement areas,
-      and explains how enhancements align with CS program outcomes.
-    </p>
+    <p class="muted">This video reviews original artifacts, highlights improvements, and explains CS-499 outcome alignment.</p>
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
       <iframe
         src="https://onedrive.live.com/personal/70031df6544df406/_layouts/15/embed.aspx?UniqueId=3187f384-b8aa-4cd0-a6e7-531e18ab38ae"
-        style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
         allowfullscreen
         title="Code Review Video">
       </iframe>
     </div>
 
-    <p class="muted" style="margin-top:10px;">
-      <strong>Note:</strong> If the video does not load, download it below.
-    </p>
+    <p class="muted" style="margin-top:10px;"><strong>Note:</strong> If the video does not load, download it below.</p>
+    <a href="code%20review%20video%20final.mp4" download>⬇️ Download Code Review Video (MP4)</a>
+  </div>
+</section>
 
-    <p>
-      <a href="code%20review%20video%20final.mp4" download>
-        ⬇️ Download Code Review Video (MP4)
-      </a>
-    </p>
+<!-- FEATURED ARTIFACTS -->
+<section id="featured">
+  <h3 class="section-title">Featured Artifacts</h3>
+  <div class="grid">
+    <div class="item">
+      <strong>Software Design & Engineering</strong><br/>
+      <a href="https://github.com/KainMason/CS465-Final-Project" target="_blank">Travlr Getaways – MEAN Stack</a>
+    </div>
+    <div class="item">
+      <strong>Algorithms & Data Structures</strong><br/>
+      <a href="https://github.com/KainMason/C330-Computer-Graphics-and-Visualization" target="_blank">3D Desk Scene – C++ / OpenGL</a>
+    </div>
+    <div class="item">
+      <strong>Databases</strong><br/>
+      <a href="https://github.com/KainMason/CS-340-8-2-Journal-Portfolio-Item" target="_blank">Grazioso Salvare – MongoDB Dashboard</a>
+    </div>
+  </div>
+</section>
+
+<!-- NARRATIVES -->
+<section id="narratives">
+  <h3 class="section-title">Artifact Narratives</h3>
+  <div class="callout">
+    <a href="CS499_M2_Narrative%20(3).docx" target="_blank">Milestone Two Narrative</a>
+    <a href="CS499_M3_Narrative%20(1).docx" target="_blank">Milestone Three Narrative</a>
+    <a href="CS499_M4_Narrative%20(1).docx" target="_blank">Milestone Four Narrative</a>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section id="downloads">
+  <h3 class="section-title">Original & Enhanced Artifacts</h3>
+  <div class="callout">
+    <a href="Original%20format%20Artificat%20one%20Enhanced_KainMason_M2.zip">Original – Software Design</a>
+    <a href="Enhanced%20format%20Artificat%20one%20Enhanced_KainMason_M2%20-%20Copy.zip">Enhanced – Software Design</a>
+    <a href="Original%20format%20Artifact%20two%20C330-Computer-Graphics-and-Visualization-Enhance_KainMason%20(1).zip">Original – Algorithms</a>
+    <a href="Enhanced%20format%20Artifact%20two%20C330-Computer-Graphics-and-Visualization-Enhance_KainMason%20(1)%20-%20Copy.zip">Enhanced – Algorithms</a>
+    <a href="Original%20format%20Artifact%20three%20CS-340-8-2-Journal-Portfolio-Item-main%20(2)%20(1).zip">Original – Databases</a>
+    <a href="Enhanced%20format%20Artifact%20three%20CS-340-8-2-Journal-Portfolio-Item-main%20(2)%20(1)%20-%20Copy.zip">Enhanced – Databases</a>
   </div>
 </section>
 
 <footer>
   <span>&copy; 2025 Kain Mason</span>
-  <span>
-    <a href="https://github.com/KainMason" target="_blank">GitHub</a> |
-    Built with GitHub Pages
-  </span>
+  <span><a href="https://github.com/KainMason" target="_blank">GitHub</a> | GitHub Pages</span>
 </footer>
 
 </main>
